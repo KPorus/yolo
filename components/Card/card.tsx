@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.7,
     shadowRadius: 37,
     elevation: 10,
+    zIndex:1
   },
   gradientBackground: {
     padding: 20,
