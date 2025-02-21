@@ -1,15 +1,11 @@
 import {
   View,
   Text,
-  Pressable,
   ScrollView,
-  Image,
   StyleSheet,
   Appearance,
-  Dimensions,
 } from "react-native";
 import React from "react";
-import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors, Theme } from "@/constants/Colors";
 import { StatusBar } from "expo-status-bar";
@@ -46,11 +42,6 @@ const index = () => {
           your digital debit card
         </Text>
         <Card/>
-        {/* <Link href="/(tabs)/home" asChild>
-            <Pressable>
-              <Text style={styles.text}>Profile</Text>
-            </Pressable>
-          </Link> */}
       </ScrollView>
 
       <StatusBar backgroundColor="#161622" style="light" />

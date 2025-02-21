@@ -47,6 +47,7 @@ const FreezingEffect = () => {
         >
           <Image
             source={require("@/assets/images/freeze1.png")}
+            resizeMode="cover"
             style={styles.freezeImage}
           />
         </Animated.View>
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    gap:"50"
+    gap:50
   },
   cardWrapper: {
     width: "60%",   
@@ -93,7 +94,7 @@ freezeImage: {
     // maxWidth: "100%",
     width: "100%",
     // height: "100%",
-    resizeMode: "cover",
+
     borderRadius: 15,
     opacity: 0.6,
   },
