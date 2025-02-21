@@ -7,73 +7,63 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const CreditCard = () => {
   return (
-    <View style={styles.cardLayout}>
-      <Card style={styles.card}>
-        <LinearGradient
-          colors={["#000000", "#1a1a1a"]}
-          style={styles.gradientBackground}
-        >
-          {/* Top Logos */}
-          <View style={styles.topRow}>
-            <Image source={require("@/assets/images/yolo.png")} />
-            <Image source={require("@/assets/images/yesbank.png")} />
+    <Card style={styles.card}>
+      <LinearGradient
+        colors={["#000000", "#1a1a1a"]}
+        style={styles.gradientBackground}
+      >
+        {/* Top Logos */}
+        <View style={styles.topRow}>
+          <Image source={require("@/assets/images/yolo.png")} />
+          <Image source={require("@/assets/images/yesbank.png")} />
+        </View>
+
+        <View style={styles.secondRow}>
+          {/* Card Number */}
+          <View style={styles.cardNumberContainer}>
+            <Text style={styles.cardNumber}>8124</Text>
+            <Text style={styles.cardNumber}>4212</Text>
+            <Text style={styles.cardNumber}>3456</Text>
+            <Text style={styles.cardNumber}>7890</Text>
           </View>
 
-          <View style={styles.secondRow}>
-            {/* Card Number */}
-            <View style={styles.cardNumberContainer}>
-              <Text style={styles.cardNumber}>8124</Text>
-              <Text style={styles.cardNumber}>4212</Text>
-              <Text style={styles.cardNumber}>3456</Text>
-              <Text style={styles.cardNumber}>7890</Text>
+          {/* Expiry and CVV */}
+          <View style={styles.detailsRow}>
+            <View>
+              <Text style={styles.label}>expiry</Text>
+              <Text style={styles.value}>01/28</Text>
             </View>
-
-            {/* Expiry and CVV */}
-            <View style={styles.detailsRow}>
-              <View>
-                <Text style={styles.label}>expiry</Text>
-                <Text style={styles.value}>01/28</Text>
-              </View>
-              <View>
-                <Text style={styles.label}>cvv</Text>
-                <View style={styles.cvvContainer}>
-                  <Text style={styles.value}>****</Text>
-                  <Icon name="eye-off" size={20} color="#FF0000" />
-                </View>
+            <View>
+              <Text style={styles.label}>cvv</Text>
+              <View style={styles.cvvContainer}>
+                <Text style={styles.value}>****</Text>
+                <Icon name="eye-off" size={20} color="#FF0000" />
               </View>
             </View>
           </View>
+        </View>
 
-          {/* Copy Details Button */}
-          <TouchableOpacity style={styles.copyButton}>
-            <Icon name="content-copy" size={20} color="#FF0000" />
-            <Text style={styles.copyText}>copy details</Text>
-          </TouchableOpacity>
+        {/* Copy Details Button */}
+        <TouchableOpacity style={styles.copyButton}>
+          <Icon name="content-copy" size={20} color="#FF0000" />
+          <Text style={styles.copyText}>copy details</Text>
+        </TouchableOpacity>
 
-          {/* RuPay Logo */}
-          <View style={styles.rupayContainer}>
-            <Image
-              source={require("@/assets/images/rupay.png")}
-              // style={styles.rupayLogo}
-            />
-          </View>
-        </LinearGradient>
-      </Card>
-      <Text style={{ color: "#FFF" }}>Freeze</Text>
-    </View>
+        {/* RuPay Logo */}
+        <View style={styles.rupayContainer}>
+          <Image
+            source={require("@/assets/images/rupay.png")}
+            // style={styles.rupayLogo}
+          />
+        </View>
+      </LinearGradient>
+    </Card>
   );
 };
 
 const styles = StyleSheet.create({
-  cardLayout: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: "20"
-  },
   card: {
-    maxWidth: "100%",
-    width:"60%",
+    width:"100%",
     borderRadius: 15,
     overflow: "hidden",
     marginVertical: 16,
@@ -129,14 +119,14 @@ const styles = StyleSheet.create({
   },
   detailsRow: {
     marginTop: 20,
-    flex:1,
+    flex: 1,
     alignItems: "center",
     justifyContent: "space-between",
   },
   label: {
     color: "#AAAAAA",
     fontSize: 12,
-    textTransform:"uppercase"
+    textTransform: "uppercase",
   },
   value: {
     color: "#FFFFFF",

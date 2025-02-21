@@ -14,7 +14,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors, Theme } from "@/constants/Colors";
 import { StatusBar } from "expo-status-bar";
 import Btn from "@/components/Buttons/btn";
-import Card from "@/components/Card/card";
+import Card from "@/components/Card/";
 
 const index = () => {
   const colorScheme = Appearance.getColorScheme();
