@@ -9,7 +9,6 @@ const expirationDate = () => {
 };
 const generateCreditInfo = () => {
   const creditInfo = {
-    name: faker.person.fullName,
     creditCardNumber: faker.finance.creditCardNumber(),
     expirationDate: expirationDate(),
     cvv: faker.finance.creditCardCVV(),
