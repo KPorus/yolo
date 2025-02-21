@@ -91,10 +91,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
 },
 freezeImage: {
-    // maxWidth: "100%",
     width: "100%",
-    // height: "100%",
-
     borderRadius: 15,
     opacity: 0.6,
   },

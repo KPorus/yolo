@@ -58,7 +58,7 @@ const CreditCard = () => {
         </View>
 
         {/* Copy Details Button */}
-        <TouchableOpacity style={styles.copyButton}>
+        <TouchableOpacity style={styles.copyButton} onPress={()=>{alert("Copy successfull")}}>
           <Icon name="content-copy" size={20} color="#FF0000" />
           <Text style={styles.copyText}>copy details</Text>
         </TouchableOpacity>
